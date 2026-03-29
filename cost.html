@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Productivity Dashboard</title>
+<title>Cost - Productivity Dashboard</title>
 <style>
   * { margin: 0; padding: 0; }
   html, body { width: 100%; height: 100%; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center; }
@@ -15,7 +15,7 @@
 <script>
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   function renderPDF() {
-    var url = 'productivity.pdf?t=' + Date.now();
+    var url = 'yesterday-productivity.pdf?t=' + Date.now();
     pdfjsLib.getDocument(url).promise.then(function(pdf) {
       pdf.getPage(1).then(function(page) {
         var canvas = document.getElementById('pdf-canvas');
